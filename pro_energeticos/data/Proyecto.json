@@ -1,0 +1,35 @@
+[
+    {
+        "idProyecto": 1,
+        "nombre": "Hidroelectrica Roblez",
+        "inversion": 700000.0,
+        "tiempodevida": 70,
+        "fechaInicio": "2022-11-04",
+        "fechaFin": "2028-06-20",
+        "electicidadGeneradapordia": 120.0,
+        "acronimo": "HE-RZ",
+        "costototal": 9000000.0
+    },
+    {
+        "idProyecto": 2,
+        "nombre": "Parque Eolico Saraguro",
+        "inversion": 2000000.0,
+        "tiempodevida": 200,
+        "fechaInicio": "2025-10-11",
+        "fechaFin": "2030-11-23",
+        "electicidadGeneradapordia": 70.0,
+        "acronimo": "PES",
+        "costototal": 8000000.0
+    },
+    {
+        "idProyecto": 3,
+        "nombre": "Coca Codo",
+        "inversion": 1000000.0,
+        "tiempodevida": 25,
+        "fechaInicio": "2000-11-12",
+        "fechaFin": "2025-04-12",
+        "electicidadGeneradapordia": 250.0,
+        "acronimo": "CCS",
+        "costototal": 5000000.0
+    }
+]

@@ -1,0 +1,165 @@
+{% extends 'template.html' %}
+{% block content %}
+<div class="page-title" data-aos="fade">
+  <div class="heading">
+    <div class="container">
+      <div class="row d-flex justify-content-center text-center">
+        <div class="col-lg-8">
+          <h1>Proyectos Eléctricos</h1>
+          <p class="mb-0">Gestión de Proyectos</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .custom-table-container {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(255, 240, 240, 0.9));
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+  }
+
+  .custom-table {
+    width: 100%;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    border-collapse: separate;
+    border-spacing: 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  }
+
+  .custom-table thead {
+    background: linear-gradient(45deg, #ff0000, #ff4444);
+    color: white;
+  }
+
+  .custom-table th {
+    padding: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    border: none;
+  }
+
+  .custom-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    font-size: 0.9rem;
+    vertical-align: middle;
+  }
+
+  .custom-table tbody tr {
+    transition: all 0.3s ease;
+  }
+
+  .custom-table tbody tr:hover {
+    background-color: rgba(255, 0, 0, 0.02);
+  }
+
+  .custom-table tbody tr:last-child td {
+    border-bottom: none;
+  }
+
+  .btn-group-custom {
+    display: flex;
+    gap: 5px;
+  }
+
+  .btn-custom {
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    border: none;
+  }
+
+  .btn-danger-custom {
+    background: linear-gradient(45deg, #ff0000, #ff4444);
+    color: white;
+  }
+
+  .btn-primary-custom {
+    background: linear-gradient(45deg, #007bff, #0056b3);
+    color: white;
+  }
+
+  .btn-success-custom {
+    background: linear-gradient(45deg, #28a745, #218838);
+    color: white;
+  }
+
+  .btn-custom:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    color: white;
+  }
+
+  /* Responsive styles */
+  @media (max-width: 992px) {
+    .custom-table {
+      display: block;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+  }
+</style>
+
+<section id="courses" class="courses section">
+  <div class="container">
+    <div class="custom-table-container">
+      <table class="custom-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Nombre Proyecto</th>
+            <th>Inversión</th>
+            <th>Tiempo de vida (años)</th>
+            <th>Fecha de Inicio</th>
+            <th>Fecha de Fin</th>
+            <th>Generación de Energía diaria (MW)</th>
+            <th>Acrónimo</th>
+            <th>Costo Total</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for item in lista %}
+          <tr>
+            <td>{{item.idProyecto}}</td>
+            <td>{{item.nombre}}</td>
+            <td>{{item.inversion}}</td>
+            <td>{{item.tiempodevida}}</td>
+            <td>{{item.fechaInicio}}</td>
+            <td>{{item.fechaFin}}</td>
+            <td>{{item.electicidadGeneradapordia}}</td>
+            <td>{{item.acronimo}}</td>
+            <td>{{item.costototal}}</td>
+            <td>
+              <div class="btn-group-custom">
+                <button type="button" class="btn-custom btn-danger-custom">
+                  <i class="bi bi-trash"></i>
+                </button>
+                <a class="btn-custom btn-primary-custom" href="/proyecto/editar/{{item.idProyecto}}">
+                  <i class="bi bi-pencil"></i>
+                </a>
+                <a class="btn-custom btn-success-custom" href="/inversionista/listas/{{item.acronimo}}">
+                  <i class="bi bi-person-plus"></i>
+                </a>
+              </div>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,120 @@
+{% extends 'templateinversion.html' %}
+{% block content %}
+
+<!-- Page Title -->
+<div class="page-title" data-aos="fade">
+  <div class="heading">
+    <div class="container">
+      <div class="row d-flex justify-content-center text-center">
+        <div class="col-lg-8">
+          <h1>Inversionista</h1>
+          <p class="mb-0">Gozadera</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <nav class="breadcrumbs">
+    <div class="container">
+      <ol>
+        <li><a href="index.html">Home</a></li>
+        <li class="current">Courses</li>
+      </ol>
+    </div>
+  </nav>
+</div>
+
+<!-- Courses Section -->
+<section id="courses" class="courses section">
+  <div class="container">
+    <div class="custom-table-container">
+      <table class="custom-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Nombre del inversionista</th>
+            <th>Apellido del inversionista</th>
+            <th>Cédula</th>
+            <th>Teléfono</th>
+            <th>Proyecto al que pertenece</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for item in lista %}
+          <tr>
+            <td>{{item.idInversionista}}</td>
+            <td>{{item.nombre}}</td>
+            <td>{{item.apellido}}</td>
+            <td>{{item.dni}}</td>
+            <td>{{item.telefono}}</td>
+            <td>{{item.idpropiedad}}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<style>
+  .custom-table-container {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(255, 240, 240, 0.9));
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+  }
+
+  .custom-table {
+    width: 100%;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    border-collapse: separate;
+    border-spacing: 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  }
+
+  .custom-table thead {
+    background: linear-gradient(45deg, #ff0000, #ff4444);
+    color: white;
+  }
+
+  .custom-table th {
+    padding: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    border: none;
+  }
+
+  .custom-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    font-size: 0.9rem;
+    vertical-align: middle;
+  }
+
+  .custom-table tbody tr {
+    transition: all 0.3s ease;
+  }
+
+  .custom-table tbody tr:hover {
+    background-color: rgba(255, 0, 0, 0.02);
+  }
+
+  .custom-table tbody tr:last-child td {
+    border-bottom: none;
+  }
+
+  /* Responsive styles */
+  @media (max-width: 992px) {
+    .custom-table {
+      display: block;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+  }
+</style>
+
+{% endblock %}

@@ -1,0 +1,58 @@
+[
+    {
+        "idInversionista": 1,
+        "nombre": "Juan",
+        "apellido": "Romar",
+        "dni": "12345678",
+        "telefono": "0987764321",
+        "idpropiedad": "HE-RZ"
+    },
+    {
+        "idInversionista": 2,
+        "nombre": "Luis",
+        "apellido": "Chamba",
+        "dni": "234345478",
+        "telefono": "0980284777",
+        "idpropiedad": "PES"
+    },
+    {
+        "idInversionista": 3,
+        "nombre": "Andres",
+        "apellido": "Fuentes",
+        "dni": "1191749313",
+        "telefono": "0980927348",
+        "idpropiedad": "HE-RZ"
+    },
+    {
+        "idInversionista": 4,
+        "nombre": "Mateo",
+        "apellido": "Suarez",
+        "dni": "1150282643",
+        "telefono": "0980739046",
+        "idpropiedad": "HE-RZ"
+    },
+    {
+        "idInversionista": 5,
+        "nombre": "Pedro",
+        "apellido": "Infante",
+        "dni": "115022471",
+        "telefono": "098472567",
+        "idpropiedad": "HE-RZ"
+    },
+    {
+        "idInversionista": 6,
+        "nombre": "Rina",
+        "apellido": "Alexandrina",
+        "dni": "1145328913",
+        "telefono": "0987620916",
+        "idpropiedad": "HE-RZ"
+    },
+    {
+        "idInversionista": 7,
+        "nombre": "Orfeo",
+        "apellido": "DeLira",
+        "dni": "1154172572",
+        "telefono": "0971453891",
+        "idpropiedad": "PES"
+    }
+]
